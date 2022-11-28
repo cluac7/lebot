@@ -32,13 +32,13 @@ async def on_message(message):
         elif 'when' in user_message.lower():
             await message.channel.send('Did u mean wenomechaindasama?')
             await message.channel.send(
-                file=discord.File('wenomechainsama-dog.jpg'))
+                file=discord.File('assets\images\wenomechainsama-dog.jpg'))
             return
         elif '?' in user_message.lower():
             await message.channel.send(
                 'Teacher I suspect the answer to your question is four teacher'
             )
-            await message.channel.send(file=discord.File('cover1.jpg'))
+            await message.channel.send(file=discord.File('assets\images\four.jpg'))
             return
         else:
             return
