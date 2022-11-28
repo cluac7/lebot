@@ -22,7 +22,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.channel.name == 'general' or message.channel.id == 1005944053562617887:
+    if message.channel.name == 'general' or message.channel.id == os.environ.get('CHANNEL'):
         if 'forgor' in user_message.lower():
             await message.add_reaction('\N{skull}')
             return
@@ -32,13 +32,13 @@ async def on_message(message):
         elif 'when' in user_message.lower():
             await message.channel.send('Did u mean wenomechaindasama?')
             await message.channel.send(
-                file=discord.File('wenomechainsama-dog.jpg'))
+                file=discord.File('assets\images\wenomechainsama-dog.jpg'))
             return
         elif '?' in user_message.lower():
             await message.channel.send(
                 'Teacher I suspect the answer to your question is four teacher'
             )
-            await message.channel.send(file=discord.File('cover1.jpg'))
+            await message.channel.send(file=discord.File('assets\images\four.jpg'))
             return
         else:
             return
