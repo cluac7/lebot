@@ -22,7 +22,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.channel.name == 'general' or message.channel.id == 1005944053562617887:
+    if message.channel.name == 'general' or message.channel.id == os.environ.get('CHANNEL'):
         if 'forgor' in user_message.lower():
             await message.add_reaction('\N{skull}')
             return
